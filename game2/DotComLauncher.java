@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+
 
 public class DotComLauncher {
     public static void main(String[] args){
@@ -8,7 +10,8 @@ public class DotComLauncher {
 
         //geenrating random locations for the game
         int randomNum=(int)(Math.random()*5);
-        int[] locations={randomNum,randomNum+1,randomNum+2};
+        ArrayList<Integer> locations=new ArrayList<Integer>(){
+        {add(randomNum);add(randomNum+1);add(randomNum+2);}};
         game1.setLocationCells(locations);
         //for input
         Scanner input=new Scanner(System.in);
